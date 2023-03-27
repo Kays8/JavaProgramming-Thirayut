@@ -95,6 +95,51 @@ public class Ex6 {
         System.out.println("is Odd");
     }
 
+    /**
+     * Ex7
+     * 
+     * isOdd [Check is Odd]*
+     * 
+     * @param num
+     */
+    public void isDivideBy(int num, Scanner input) {
+        System.out.print("Please enter number(N) : ");
+        int n = input.nextInt();
+        System.out.print("Please enter number(X) : ");
+        int x = input.nextInt();
+        String sum = "";
+        for (int i = 1; i <= n; i++) {
+            if (i % x == 0) {
+                if (sum == "") {
+                    sum = sum + i;
+                } else {
+                    sum = sum + "," + i;
+                }
+            }
+        }
+        System.out.println(sum);
+    }
+
+    /**
+     * Ex8
+     * 
+     * isOdd [Check is Odd]*
+     * 
+     * @param num
+     */
+    public void printStarAdvance(int num, Scanner input) {
+        System.out.print("Please enter number : ");
+        int n = input.nextInt();
+        String star = "*";
+        System.out.println(star);
+        for (int i = 1; i <= n; i++) {
+            for (i = 1; i < n; i++) {
+                star += "_";
+                System.out.println(star + "*");
+            }
+        }
+    }
+
     /*************************************************/
     // " Method "
 
@@ -119,16 +164,23 @@ public class Ex6 {
     // ex.checkChar(c);
     // }
 
-    // Ex 5-6
-    public static void main(String[] args) {
-        Ex6 ex = new Ex6();
-        Scanner input = new Scanner(System.in);
-        // System.out.println("Please, enter a number: ");
-        // int num = input.nextInt();
-        // ex.printType1(num);
-        // ex.printType2(num);
-        // ex.isPositive(num, input);
-        ex.isOdd(0, input);
-    }
+    // Ex 5-6-7
+    // public static void main(String[] args) {
+    //     Ex6 ex = new Ex6();
+    //     Scanner input = new Scanner(System.in);
+    //     // System.out.println("Please, enter a number: ");
+    //     // int num = input.nextInt();
+    //     // ex.printType1(num);
+    //     // ex.printType2(num);
+    //     // ex.isPositive(num, input);
+    //     //ex.isOdd(0, input);
+    //     ex.isDivideBy(0, input);
+    // }
 
+    // // Ex 8
+    // public static void main(String[] args) {
+    //     Ex6 ex = new Ex6();
+    //     Scanner input = new Scanner(System.in);
+    //     ex.printStarAdvance(0, input);
+    // }
 }
